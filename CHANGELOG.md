@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/brotherofijul/pg2s-baileys/compare/v1.0.0...v1.0.1) (2025-11-27)
+
+
+### Bug Fixes
+
+* keep creds reference alive to stop re-login loop ([8fc6973](https://github.com/brotherofijul/pg2s-baileys/commit/8fc69739c8e7d09954d9ed1cf9213ade49c2812b))
+
 # 1.0.0 (2025-11-15)
 
 
