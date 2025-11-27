@@ -110,11 +110,10 @@ export default async function usePostgresAuthState(
 		}
 	};
 
-	let creds = await dbGet("creds");
-	if (!creds) {
-		creds = initAuthCreds();
-		await dbSet("creds", creds);
-	}
+	const creds = (await dbGet("creds")) ?? initAuthCreds();
+	if (!cache.has(`${phoneNumber}:creds`)) {
+    await dbSet("creds", creds);
+}
 
 	return {
 		state: {
